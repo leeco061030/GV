@@ -135,7 +135,7 @@ export default {
     const processContent = async (text) => {
         const processed = [];
         if (!text) return processed;
-        const imgTagRegex = /\《img:(.+?)\》/g;
+        const imgTagRegex = /\[img:(.+?)\]/g;
         const parts = text.split(imgTagRegex);
         for (let i = 0; i < parts.length; i++) {
             if (i % 2 === 0) {
