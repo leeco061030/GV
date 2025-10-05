@@ -105,8 +105,7 @@ export default {
             const processed = [];
             if (!text) return processed;
 
-            // 🌟 이미지 태그 정규 표현식을 《img:키워드》 형태로 유지합니다. (123번째 줄)
-            const imgTagRegex = /《img:(.+?)》/g;
+            const imgTagRegex = /\{img:(.+?)\}/g;
             const parts = text.split(imgTagRegex); // 태그를 기준으로 텍스트를 나눔
 
             for (let i = 0; i < parts.length; i++) {
@@ -126,8 +125,7 @@ export default {
                             processed.push({ type: 'image', uri: dataUri });
                         }
                     } else { // 키워드가 없으면
-                        // 키워드가 없을 경우 《img:키워드》 형태로 다시 출력합니다.
-                        processed.push({ type: 'text', text: `《img:${keyword}》` });
+                        processed.push({ type: 'text', text: `{img:${keyword}}` });
                     }
                 }
             }
