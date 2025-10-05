@@ -42,7 +42,7 @@ const IMAGE_KEYWORDS = {
 
     '주의': 'https://i.imgur.com/dJ8vU52.png',
 
-    '하트': 'https://i.imgur.com/bY2a3y4.png',
+    'kas': 'https://i.imgur.com/HDUBh2f.jpeg',
 
 };
 
