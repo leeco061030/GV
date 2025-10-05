@@ -1,0 +1,4 @@
+# wrangler.toml 파일 내용
+name = "gv"
+main = "src/workers.js"
+compatibility_date = "2025-10-05"
